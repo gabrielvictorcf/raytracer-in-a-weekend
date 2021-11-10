@@ -1,5 +1,15 @@
 # raytracer-in-a-weekend
-A parallelized ray tracer in under 600 lines of rust made by reading the "Raytracer in a Weekend" book.
+<div align="center">
+    A parallelized ray tracer in under 600 lines of rust inspired by the "Raytracer in a Weekend" book.
+    <br></br>
+    <img src="https://user-images.githubusercontent.com/64982761/141188184-c11d37f4-b0ba-4637-935e-675ddf054cc0.png"
+         alt="Final scene featuring spheres of 3 different materials">
+    <br>
+    <p align="center">
+    <em>Final scene with Lambertian, Metallic and Dielectric spheres 1200x800</em>
+    </p>
+    <br>
+</div>
 
 ["Raytracing in one weekend"](https://github.com/RayTracing/raytracing.github.io/blob/master/books/RayTracingInOneWeekend.html)
 is an introductory book on Computer Graphics where you learn graphics concepts through a
@@ -17,10 +27,10 @@ from recursive to iterative for better memory performance).
 
 After the ray tracer itself was ready, i used rust's [`image`](https://github.com/image-rs/image)
 library to output the scenes in `.png` format and also parallelized the main pixel-sampling hot
-loop with rust's amazing [`rayon`](https://github.com/rayon-rs/rayon) library, which makes it
-easy to parallelize iterators by just using some Traits. This parallelization led to a 2x
-speedup (2hrs to 1hr) in my 2-core notebook, which theoretically (as in, *untested*) is an
-`n_cores` speedup.
+loop with rust's amazing [`rayon`](https://github.com/rayon-rs/rayon) library.
+
+This parallelization led to a 2x speedup (2hrs to 1hr) in my 2-core notebook, which theoretically
+(as in, *untested*) is an *number of cores you have* speedup.
 
 ```rust
 // Before rayon: write_color prints the pixel in PPM to stdout (piped to a file)
@@ -62,14 +72,7 @@ another speedup, but may make it more difficult to follow the future books in th
 [The rest of you life](https://raytracing.github.io/books/RayTracingTheRestOfYourLife.html)
 which i pretend to do sometime.
 
-## Some other renders
-The idea of the book is to incrementally build the raytracer, so at the end of (almost!) every
-chapter you have a new scene rendered to showcase what you implemented - these are my results.
-> Disclaimer: i only added `.png` output and the very end, so these are in `.ppm` format.
-
-
-
-## Trying this out for yourself
+## Installation / Usage - trying this out for yourself
 If you want to play with this code a little, it's properly commented and should be easy to
 make a custom scene. The `random_scene` at the end of `main.rs` function is where the scene
 you saw above was instantiated, and has the following snippet where the big spheres are
