@@ -19,9 +19,9 @@ curious about how computer graphics can accomplish such realistic results, i str
 recommend this book to find out how!
 
 Perhaps the biggest challenge i faced was that the book heavily utilizes concepts of OOP in C++
-which aren't as natural / idiomatic in Rust. Nevertheless, my implementation closely resembles
-the one in the book, apart from a function or two (i.e: i changed the main ray color function
-from recursive to iterative for better memory performance).
+that aren't as natural / idiomatic (or simply don't exist) in Rust. Nevertheless, my
+implementation closely resembles the one in the book, apart from a function or two
+(i.e: i changed the main ray color function from recursive to iterative for better memory performance).
 
 ## Improving the raytracer
 
