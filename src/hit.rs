@@ -32,10 +32,6 @@ impl HitRecord {
         Self { t, p, normal, front_face, material }
     }
 
-    // pub fn scatter(&self, hit: &HitRecord, ray: &Ray) -> Option<Scatter> {
-    //     self.material.scatter(hit, ray)
-    // }
-
     /// Calls the hit material's underlying scatter function
     pub fn scatter(&self, ray: &Ray) -> Option<Scatter> {
         self.material.scatter(self, ray)
