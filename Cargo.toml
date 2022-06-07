@@ -10,6 +10,6 @@ lto = true
 codegen-units = 1
 
 [dependencies]
-fastrand = "1.5.0"
-image = "0.23.14"
-rayon = "1.5.1"
+fastrand = "1.7.0"
+image = "0.24.2"
+rayon = "1.5.3"
